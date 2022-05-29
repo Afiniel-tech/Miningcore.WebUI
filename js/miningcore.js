@@ -1,6 +1,7 @@
 /*!
   * Miningcore.js v1.02
   * Copyright 2020 Authors (https://github.com/minernl/Miningcore)
+  * copyright 2022 Authors (https://github.com/afiniel-tech)
   */
 
 // --------------------------------------------------------------------------------------------
@@ -12,44 +13,43 @@
 // --------------------------------------------------------------------------------------------
 
 
+// Making sure the page ends with a slash.
+var WebUI = window.location.protocol + "//" + window.location.hostname + "/"; 
 
+  // Check if the user is using slash or not.
+  if (WebUI.substring(WebURL - 1, WebURL) == "/")
+  {
+    // The input is equal to TRUE
+    console.log('Loading home page content.');
+  }
+  // The input is equal to FALSE
+  else (WebUI.substring(WebURL - 1, WebURL) != "")
+  {
+    WebUI = WebUI + "/";
+    // Prints out the correct URL Link.
+    console.log('Did you forget to add a slash at the end of your url? Example: ', WebURL);
+  }
+  var API = WebUI + "api/";
 
-
-
-
-
-
-
-
-
-// read WebURL from current browser
-var WebURL         = window.location.protocol + "//" + window.location.hostname + "/";  // Website URL is:  https://domain.com/
-// WebURL correction if not ends with /
-if (WebURL.substring(WebURL.length-1) != "/")
-{
-	WebURL = WebURL + "/";
-	console.log('Corrected WebURL, does not end with / -> New WebURL : ', WebURL);
-}
-var API            = WebURL + "api/";   						// API address is:  https://domain.com/api/
-// API correction if not ends with /
-if (API.substring(API.length-1) != "/")
-{
-	API = API + "/";
-	console.log('Corrected API, does not end with / -> New API : ', API);
-} 
-var stratumAddress = window.location.hostname;           				// Stratum address is:  domain.com
-
-
-
-
-
-
+  // Check if the user is using slash or not.
+  if (API.substring(API.length - 1, API.length) != "/")
+  {
+    console.log('Loading API page content.');
+  }
+  else (API.substring(API.length - 1, API.length) == "")
+  {
+    // Prints out the correct API Link.
+    API = API + "/";
+    console.log('Did you forget to add a slash at the end of your API url? Example: ', API);
+  }
+  // And lasty our stratum URL.
+  var stratumAddress = windows.location.hostname;
 
 
 // --------------------------------------------------------------------------------------------
 // no need to change anything below here
 // --------------------------------------------------------------------------------------------
-console.log('MiningCore.WebUI : ', WebURL);		                      // Returns website URL
+console.log('MiningCore.WebUI : ', WebURL);		                                 // Returns website URL
 console.log('API address used : ', API);                                      // Returns API URL
 console.log('Stratum address  : ', "stratum+tcp://" + stratumAddress + ":");  // Returns Stratum URL
 console.log('Page Load        : ', window.location.href);                     // Returns full URL
@@ -64,7 +64,7 @@ if(is_IE) {
 	console.log('Running in IE browser is not supported - ', nua);
 }
 
-// Load INDEX Page content
+// Load STATS data from API
 function loadIndex() {
   $("div[class^='page-").hide();
   
@@ -203,7 +203,7 @@ function loadHomePage() {
 		poolCoinTableTemplate += "	<h4><i class='fas fa-exclamation-triangle'></i> Warning!</h4>";
 		poolCoinTableTemplate += "	<hr>";
 		poolCoinTableTemplate += "	<p>The pool is currently down for maintenance.</p>";
-		poolCoinTableTemplate += "	<p>Please try again later.</p>";
+		poolCoinTableTemplate += "	<p>Dont worry your coins are safe. Please contact support if you have any questions about the maintenance</p>";
 	  poolCoinTableTemplate += "</div>"
 	  poolCoinTableTemplate += "</td></tr>";
 	  

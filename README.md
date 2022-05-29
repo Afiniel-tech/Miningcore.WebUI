@@ -1,21 +1,27 @@
-# Miningcore.WebUI
-<h4>Miningcore WebUI for the Coinfoundry Miningcore Pool</h4>
+## Miningcore WebUI
 
-Miningcore is one of the best open source minning pools there are.
-To make this pool look good, you have to have a nice and fast user interface.
-Miningcore.WebUI does that for you and it open source. so you can change it as you want. 
+[Miningcore](https://github.com/oliverw/miningcore) is a high-performance Mining Pool Software for Linux and Windows
+A public production pool requires a web-frontend for your users to check their hashrate, earnings etc. Miningcore does not include such frontend but there are several community projects that can be used as starting point like
+Miningcore.WebUI. It's open source. so you can change it as you want. 
 
-How to install & Configure
-This Miningcore WebUI need a working Miningcore Pool API
-- Download the Miningcore.WebUI files
-- Save them on your webserver and point your webserver config to the index.html
+## How to install & Configure
+First you clone the Miningcore WebUI to your webserver
+```
+git clone https://github.com/Afiniel-tech/Miningcore.WebUI.git
+```
+When you have clone the Miningcore WebUI to your webserver:
+```
+sudo nano Miningcore.WebUI/js/miningcore.js
+``` 
+Go to line: 
+
+you should now see the site and live pool info.
+
   
-You should now see the site and live pool API info
+## Website is visible, but no live data is shown.
 
-  
-<b>Website is visible, but no live data is shown</b></br>
-Live info data is retrieved from the miningcore pool API.</br>
-The WebUI website default looks at the domain-name/api.</br>
+Live info data is retrieved from the miningcore pool API.
+The WebUI website default looks at the domain-name/api.
 If this is not you api location, you need to edit the miningcore.js file.</br>
 
 Chang API location</br>
