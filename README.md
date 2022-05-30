@@ -62,7 +62,13 @@ let me know and we will see what we can do.
 - add payment threshold
 
 
-<b>Changes:</b></br>
+## Changes:
+version 1.1 (30 may 2022)
+- Changes and clean up on miningcore.js
+- Rewrite README.md
+- Small changes to pool config page
+- Change to index.html
+#
 Version 1.0  (1 jul 2019)
 - simple and fast WebUI (html and javascript)
 - one file website displays selected info block and hides the rest

@@ -13,36 +13,36 @@
 // --------------------------------------------------------------------------------------------
 
 
-// Making sure the page ends with a slash.
+
 var WebUI = window.location.protocol + "//" + window.location.hostname + "/"; 
 
-  // Check if the user is using slash or not.
+  
   if (WebUI.substring(WebURL - 1, WebURL) == "/")
   {
-    // The input is equal to TRUE
+    // The input is equal to TRUE if slashes are found.
     console.log('Loading home page content.');
   }
-  // The input is equal to FALSE
+   // The input is equal to TRUE if slashes are found.
   else (WebUI.substring(WebURL - 1, WebURL) != "")
   {
     WebUI = WebUI + "/";
-    // Prints out the correct URL Link.
+
     console.log('Did you forget to add a slash at the end of your url? Example: ', WebURL);
   }
   var API = WebUI + "api/";
 
-  // Check if the user is using slash or not.
+  
   if (API.substring(API.length - 1, API.length) != "/")
   {
     console.log('Loading API page content.');
   }
   else (API.substring(API.length - 1, API.length) == "")
   {
-    // Prints out the correct API Link.
+
     API = API + "/";
     console.log('Did you forget to add a slash at the end of your API url? Example: ', API);
   }
-  // And lasty our stratum URL.
+  
   var stratumAddress = windows.location.hostname;
 
 
@@ -203,7 +203,7 @@ function loadHomePage() {
 		poolCoinTableTemplate += "	<h4><i class='fas fa-exclamation-triangle'></i> Warning!</h4>";
 		poolCoinTableTemplate += "	<hr>";
 		poolCoinTableTemplate += "	<p>The pool is currently down for maintenance.</p>";
-		poolCoinTableTemplate += "	<p>Dont worry your coins are safe. Please contact support if you have any questions about the maintenance</p>";
+		poolCoinTableTemplate += "	<p>Dont worry your coins are safe. Please contact support if you have any questions about the maintenance.</p>";
 	  poolCoinTableTemplate += "</div>"
 	  poolCoinTableTemplate += "</td></tr>";
 	  
